@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box
+}
+
+header {
+    display: inline;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0
+}
+
+main {
+    background-color: #DDDDDD;
+    padding: 10px 10px 10px 100px;
+    overflow: auto;
+}
+
+aside {
+    background-color: #0061A8;
+    float: right;
+    width: 25%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+nav {
+    background-color: #2978B5;
+    padding: 5px;
+    position: sticky;
+    top: 0
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white
+}
+
+nav a:hover {
+    font-weight: bold
+}
+
+nav li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 20px
+}
+
+
+
+footer {
+    clear: both;
+    padding: 20px;
+    color: white;
+    background-color: #00a2c6;
+    text-align: center;
+    font-weight: bold
+}
+
+.jumbotron img {
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content {
+    padding: 20px;
+    float: left;
+    width: 75%;
+}
+
+.card {
+    background-color: #8AB6D6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px
+}
+
+.profile img {
+    width: 250px;
+    object-position: center;
+}
