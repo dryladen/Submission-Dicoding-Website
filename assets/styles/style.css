@@ -10,7 +10,7 @@ body,
 h1 {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 main {
@@ -36,7 +36,7 @@ aside h2 {
 }
 
 nav {
-    background-color: #1687A7;
+    background-color: #03506F;
     border-top: 10px solid #132C33;
     padding: 2px;
     position: sticky;
@@ -47,11 +47,16 @@ nav a {
     font-size: 18px;
     font-weight: 400;
     text-decoration: none;
-    color: white
+    color: white;
 }
 
-nav a:hover {
+nav a:hover,
+.dropbtn:hover {
     font-weight: bold
+}
+
+nav ul {
+    margin: 0;
 }
 
 nav li {
@@ -69,7 +74,7 @@ footer {
     clear: both;
     padding: 5px;
     color: white;
-    background-color: #1687A7;
+    background-color: #03506F;
     text-align: center;
     font-weight: bold
 }
@@ -86,6 +91,34 @@ table {
     object-position: center;
 }
 
+.dropdown {
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.show {
+    display: block;
+}
+
 .content {
     float: left;
     width: 72%;
@@ -93,9 +126,18 @@ table {
 }
 
 .content p {
+    font-family: 'Courier New', Courier, monospace;
     text-align: justify;
     text-indent: 40px;
     line-height: 30px;
+}
+
+h3,
+h1 {
+    background-color: #1687A7;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .content img {
