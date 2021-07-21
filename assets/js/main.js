@@ -1,3 +1,4 @@
+// dropdown navbar
 let dropDown = document.querySelector(".dropbtn");
 dropDown.addEventListener("click",function(){
     var dropdowns = document.querySelector(".dropdown-content");
@@ -15,4 +16,13 @@ window.onclick = function (e){
             }
         }
     }
+}
+
+// scroll indicator
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - 625;
+    var scrolled = (winScroll / height) * 100;
+    document.querySelector(".progress-bar").style.width = scrolled + "%";
 }
