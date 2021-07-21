@@ -31,5 +31,6 @@ function myFunction() {
     let height = document.documentElement.scrollHeight - 625;
     let scrolled = (winScroll / height) * 100;
     document.querySelector(".progress-bar").style.width = scrolled + "%";
-
+    var dropdowns = document.querySelector(".dropdown-content");
+    dropdowns.classList.remove("show");
 }
