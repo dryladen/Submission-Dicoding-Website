@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    transition: all 0.5s ease;
+
 }
 
 html {
@@ -183,4 +185,42 @@ h1 {
 .profile img {
     border: 3px solid white;
     width: 300px;
+}
+
+@media screen and (max-width: 1125px) {
+    .profile img {
+        width: 245px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    nav ul {
+        margin: 0;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .content img {
+        width: 330px;
+    }
+
+    .content,
+    aside {
+        width: 100%;
+    }
+
+    .card {
+        margin: 0 0 40px 0;
+    }
+
+    aside {
+        padding: 35px;
+    }
 }
