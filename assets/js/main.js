@@ -16,13 +16,20 @@ window.onclick = function (e){
             }
         }
     }
-}
+    if (e.target.matches('.nav-link')){
+        let link = e.target.getAttribute("href");
+        let tujuan = document.querySelector(link);
+        document.body.scrollTop = (tujuan.offsetTop-70);
+        e.preventDefault();
+    }
+};
 
 // scroll indicator
 window.onscroll = function() {myFunction()};
 function myFunction() {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - 625;
-    var scrolled = (winScroll / height) * 100;
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - 625;
+    let scrolled = (winScroll / height) * 100;
     document.querySelector(".progress-bar").style.width = scrolled + "%";
+
 }
