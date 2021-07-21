@@ -40,7 +40,7 @@ aside h2 {
 }
 
 nav {
-    background-color: #03506F;
+    background-color: #1687A7;
     border-top: 5px solid #132C33;
     position: sticky;
     top: 0;
@@ -56,12 +56,12 @@ nav a {
 }
 
 nav a:hover,
-.dropbtn:hover {
-    font-weight: bold
+nav p:hover {
+    font-weight: bold;
 }
 
 nav ul {
-    margin: 0;
+    margin: 0 0 0 40px;
 }
 
 nav li {
@@ -79,7 +79,7 @@ footer {
     clear: both;
     padding: 5px;
     color: white;
-    background-color: #03506F;
+    background-color: #1687A7;
     text-align: center;
     font-weight: bold
 }
@@ -102,7 +102,6 @@ table {
     display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -112,12 +111,17 @@ table {
     z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    transition: all 0.5s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #36aaca;
+    color: white
 }
 
 .show {
@@ -143,7 +147,7 @@ table {
 }
 
 .content p {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: justify;
     text-indent: 40px;
     line-height: 30px;

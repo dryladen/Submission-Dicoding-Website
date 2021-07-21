@@ -16,7 +16,7 @@ window.onclick = function (e){
             }
         }
     }
-    if (e.target.matches('.nav-link')){
+    if (e.target.matches('.nav-link') || e.target.matches('.nav-parent')){
         let link = e.target.getAttribute("href");
         let tujuan = document.querySelector(link);
         document.body.scrollTop = (tujuan.offsetTop-70);
