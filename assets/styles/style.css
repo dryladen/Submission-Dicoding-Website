@@ -19,6 +19,15 @@ h1 {
     padding: 0;
 }
 
+aside h2 {
+    text-align: center;
+    background-color: #132C33;
+    border: 2px solid white;
+    margin: 0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 main {
     background-color: #D8E3E7;
     padding: 20px 40px 20px 80px;
@@ -37,10 +46,6 @@ aside {
     color: white;
 }
 
-aside h2 {
-    text-align: center;
-}
-
 nav {
     background-color: #1687A7;
     border-top: 5px solid #132C33;
@@ -50,7 +55,8 @@ nav {
     z-index: 1;
 }
 
-nav a {
+nav a,
+.dropbtn p {
     font-size: 18px;
     font-weight: 400;
     text-decoration: none;
@@ -104,13 +110,25 @@ table {
     display: inline-block;
 }
 
+.dropbtn {
+    position: relative;
+}
+
+.dropbtn svg {
+    position: absolute;
+    z-index: 2px;
+    top: 0;
+    right: -20px;
+    transform: rotate(90deg);
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    transition: all 0.5s ease;
 }
 
 .dropdown-content a {
@@ -124,6 +142,10 @@ table {
 .dropdown-content a:hover {
     background-color: #36aaca;
     color: white
+}
+
+.about {
+    display: none;
 }
 
 .show {
@@ -187,20 +209,22 @@ h1 {
     width: 300px;
 }
 
-@media screen and (max-width: 1125px) {
-    .profile img {
-        width: 245px;
-    }
-}
-
 @media screen and (max-width: 1000px) {
 
     nav ul {
         margin: 0;
+        padding-left: 20px;
     }
+
 
     main {
         padding: 20px;
+    }
+
+    .about,
+    nav li {
+        display: inline-block;
+        margin: 0 10 0 0;
     }
 
     .content {

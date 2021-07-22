@@ -1,11 +1,17 @@
 // dropdown navbar
 let dropDown = document.querySelector(".dropbtn");
+const logoDropdown = document.querySelector('.dropbtn svg')
 dropDown.addEventListener("click",function(){
-    var dropdowns = document.querySelector(".dropdown-content");
+    let dropdowns = document.querySelector(".dropdown-content");
+	logoDropdown.style.transform = 'rotate(0deg)'
     dropdowns.classList.toggle("show");
+    if(dropdowns.classList.contains('show') == false){
+		logoDropdown.style.transform = 'rotate(90deg)'
+	}
 });
 
 window.onclick = function (e){
+    // dropdown remove show
     if (!e.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName(".dropdown-content");
         var i;
@@ -13,9 +19,11 @@ window.onclick = function (e){
             var openDropdown = dropdowns[i];
             if (openDropdown.classList.contains('show')) {
                 openDropdown.classList.remove('show');
+                
             }
         }
     }
+    // scrollTop setting
     if (e.target.matches('.nav-link') || e.target.matches('.nav-parent')){
         let link = e.target.getAttribute("href");
         let tujuan = document.querySelector(link);
@@ -33,4 +41,5 @@ function myFunction() {
     document.querySelector(".progress-bar").style.width = scrolled + "%";
     var dropdowns = document.querySelector(".dropdown-content");
     dropdowns.classList.remove("show");
+    logoDropdown.style.transform = 'rotate(90deg)';
 }
